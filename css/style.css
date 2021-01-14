@@ -1,0 +1,44 @@
+body {
+    color: rgb(0, 0, 0);
+    background-color: rgb(248, 255, 144);
+    width: 960x;
+    border: 4px solid black;
+    padding: 10px;
+    margin: auto;
+}
+
+h1 {
+    color: rgb(248, 255, 144);
+    background-color:rgb(0, 0, 0);
+    width: 960px;
+    border: 2px;
+    padding: 10px;
+    margin: auto;
+}
+
+h2 {
+    color: rgb(248, 255, 144);
+    background-color:rgb(0, 0, 0);
+    width: 960px;
+    border: 2px;
+    padding: 5px;
+    margin: auto;
+}
+
+main {
+    color: black;
+    background-color: white;
+    width: 960px;
+    border: 4px dotted black;
+    padding: 10px;
+    margin: auto;
+
+}
+
+p, ol, ul {
+    padding: 10px;
+}
+
+li {
+    list-style: square;
+}

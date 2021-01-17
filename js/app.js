@@ -1,103 +1,130 @@
 'use strict';
 
-// // get username and offer greeting
-// var userName = prompt('Hello, and thank you for taking my quiz! What is your name?');
-// alert('Hello, ' + userName + ', nice to meet you!');
+// get username and offer greeting
+var userName = prompt('Hello, and thank you for taking my quiz! What is your name?');
+alert('Hello, ' + userName + ', nice to meet you!');
 
-// alert('Please answer the following "yes or no" questions...');
+var correctAnswer = 0;
 
-// // write 5 questions. they MUST accept yes or no OR y or n IN ANY CASE -case-sensitivity needs to work in every format
-// // examples: YES yes Yes NO no No, Y, y
+alert('Please answer the following "yes or no" questions...');
 
-// // this is question 1
-// var answerLive = prompt('Do I live in Washington?').toLowerCase();
+// write 5 questions. they MUST accept yes or no OR y or n IN ANY CASE -case-sensitivity needs to work in every format
+// examples: YES yes Yes NO no No, Y, y
 
-// if (answerLive === 'no' || answerLive === 'n') {
-//   // console.log('Do I live in Washington? ' + answerLive);
-//   // if answer is no, this will show up
-//   alert('Correct! I live in Oregon.');
-// } else {
-//   // console.log('Do I live in Washington? ' + answerLive);
-//   // otherwise, this will show up
-//   alert('I live in Oregon.');
-// }
+// this is question 1
+var answerLive = prompt('Do I live in Washington?').toLowerCase();
 
-// // this is question 2
-// var answerCode102 = prompt('Did I take Code 102?').toLowerCase();
+if (answerLive === 'no' || answerLive === 'n') {
+  // console.log('Do I live in Washington? ' + answerLive);
+  // if answer is no, this will show up
+  alert('Correct! I live in Oregon.');
+  correctAnswer++;
+} else {
+  // console.log('Do I live in Washington? ' + answerLive);
+  // otherwise, this will show up
+  alert('I live in Oregon.');
+}
 
-// if (answerCode102 === 'no' || answerCode102 === 'n') {
-//   // console.log('Did I take Code 102? ' + answerCode102);
-//   // if answer is no, this will show up
-//   alert('Correct! I came to Code 201 from Code 101.');
-// } else {
-//   // console.log('Did I take Code 102 ' + answerCode102);
-//   // otherwise, this will show up
-//   alert('I came to Code 201 from Code 101.');
-// }
+// this is question 2
+var answerCode102 = prompt('Did I take Code 102?').toLowerCase();
 
-// // this is question 3
-// var answerColor = prompt('Is my favorite color green?').toLowerCase();
+if (answerCode102 === 'no' || answerCode102 === 'n') {
+  // console.log('Did I take Code 102? ' + answerCode102);
+  // if answer is no, this will show up
+  alert('Correct! I came to Code 201 from Code 101.');
+  correctAnswer++;
+} else {
+  // console.log('Did I take Code 102 ' + answerCode102);
+  // otherwise, this will show up
+  alert('I came to Code 201 from Code 101.');
+}
 
-// if (answerColor === 'no' || answerColor === 'n') {
-//   // console.log('Is my favorite color green? ' + answerColor);
-//   // if answer is no, this will show up
-//   alert('Correct! My favorite color is yellow.');
-// } else {
-//   // console.log('Is my favorite color green? ' + answerColor);
-//   // otherwise, this will show up
-//   alert('My favorite color is yellow.');
-// }
+// this is question 3
+var answerColor = prompt('Is my favorite color green?').toLowerCase();
 
-// // this is question 4
-// var answerPets = prompt('Do I have any pets?').toLowerCase();
+if (answerColor === 'no' || answerColor === 'n') {
+  // console.log('Is my favorite color green? ' + answerColor);
+  // if answer is no, this will show up
+  alert('Correct! My favorite color is yellow.');
+  correctAnswer++;
+} else {
+  // console.log('Is my favorite color green? ' + answerColor);
+  // otherwise, this will show up
+  alert('My favorite color is yellow.');
+}
 
-// if (answerPets === 'yes' || answerPets === 'y') {
-//   // console.log('Do I have any pets? ' + answerPets);
-//   // if answer is yes, this will show up
-//   alert('Yep! I have 2 cats.');
-// } else {
-//   // console.log('Do I have any pets? ' + answerPets);
-//   // otherwise, this will show up
-//   alert('I have 2 cats.');
-// }
+// this is question 4
+var answerPets = prompt('Do I have any pets?').toLowerCase();
 
-// // this is question 5
-// var answerCoffee = prompt('Do I like coffee?').toLowerCase();
+if (answerPets === 'yes' || answerPets === 'y') {
+  // console.log('Do I have any pets? ' + answerPets);
+  // if answer is yes, this will show up
+  alert('Yep! I have 2 cats.');
+  correctAnswer++;
+} else {
+  // console.log('Do I have any pets? ' + answerPets);
+  // otherwise, this will show up
+  alert('I have 2 cats.');
+}
 
-// if (answerCoffee === 'yes' || answerCoffee === 'y') {
-//   // console.log('Do I like coffee? ' + answerCoffee);
-//   // if answer is yes, this will show up
-//   alert('Absolutely. Coffee is life.');
-// } else {
-//   // console.log('Do I like coffee? ' + answerCoffee);
-//   // otherwise, this will show up
-//   alert('Coffe is life.');
-// }
+// this is question 5
+var answerCoffee = prompt('Do I like coffee?').toLowerCase();
 
-// this is question 6
-var answerNumberGuess = prompt('Guess my January birthday! Pick a number between 1 & 31. You will have 4 guesses.');
-for (var i = 0; i < 3; i++) {
-  // if (i === 4) {
-  //   alert('Nice try, the correct answer is 21.');
-  //   break;
-  // }
+if (answerCoffee === 'yes' || answerCoffee === 'y') {
+  // console.log('Do I like coffee? ' + answerCoffee);
+  // if answer is yes, this will show up
+  alert('Absolutely. Coffee is life.');
+  correctAnswer++;
+} else {
+  // console.log('Do I like coffee? ' + answerCoffee);
+  // otherwise, this will show up
+  alert('Coffe is life.');
+}
 
+// // this is question 6
+
+for (var i = 0; i < 4; i++) {
+  var answerNumberGuess = prompt('Guess my January birthday! Pick a number between 1 & 31. You will have 4 guesses.');
   // if answer is guessed correctly
   if(answerNumberGuess === '21') {
+    console.log('You guessed my birthday is ' + answerNumberGuess);
     alert('You guessed it right!');
+    correctAnswer++;
     break;
-    // if answer is too low
+    // if the guess is too low
   } else if (answerNumberGuess < 21 ) {
+    console.log('You guessed my birthday is ' + answerNumberGuess);
     alert('Too low! Guess again.');
-    //
+    // if the guess is too high
   } else if (answerNumberGuess > 21 ) {
+    console.log('You guessed my birthday is ' + answerNumberGuess);
     alert('Too high! Guess again.');
   }
-  answerNumberGuess = prompt('Guess my January birthday! Pick a number between 1 & 31.');
 }
 alert('The correct answer is 21.');
 
 // this is question 7
+// array of possible correct answers
+var favMovies = ['the greatest showman', 'up', 'dead poets society'];
+var clueGuesses = 6;
 
-//final message to user
-alert('Thanks again ' + userName + ' for taking my quiz!');
+for (var j = 0; j < 6; j++) {
+  var movieGuess = prompt('Can you guess one of my favorite movies? Guesses left: ' + clueGuesses--).toLowerCase();
+  // if answer is guessed correctly
+  if(movieGuess === favMovies) {
+    console.log(movieGuess + ' IS one of my favorites!');
+    alert(movieGuess + ' IS one of my favorites!');
+    correctAnswer++;
+    break;
+    // if the guess is wrong
+  } else if (movieGuess !== favMovies ) {
+    console.log(movieGuess + ' ... not one I was thinking of.');
+    alert(movieGuess + ' ... not one I was thinking of.');
+  }
+}
+alert(`The correct answers were ${favMovies[0]}, ${favMovies[1]}, and ${favMovies[2]}.`);
+
+alert(`You scored ${correctAnswer} out of 7 questions correctly.`);
+
+// //final message to user
+// alert('Thanks again ' + userName + ' for taking my quiz!');

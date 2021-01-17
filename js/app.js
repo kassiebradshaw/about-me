@@ -76,22 +76,26 @@
 
 // this is question 6
 var answerNumberGuess = prompt('Guess my January birthday! Pick a number between 1 & 31. You will have 4 guesses.');
-for (var i = 1; i < 5; i++) {
-  if (i === 4) {
-    alert('Nice try, the correct answer is 21.');
-    break;
-  }
+for (var i = 0; i < 3; i++) {
+  // if (i === 4) {
+  //   alert('Nice try, the correct answer is 21.');
+  //   break;
+  // }
+
+  // if answer is guessed correctly
   if(answerNumberGuess === '21') {
     alert('You guessed it right!');
     break;
-  } else if (answerNumberGuess <21 ) {
-    alert('Too low! Guess again.');
+    // if answer is too low
   } else if (answerNumberGuess < 21 ) {
+    alert('Too low! Guess again.');
+    //
+  } else if (answerNumberGuess > 21 ) {
     alert('Too high! Guess again.');
   }
-  answerNumberGuess = prompt('Guess my January birthday! Pick a number between 1 & 31. You will have 4 guesses.')
+  answerNumberGuess = prompt('Guess my January birthday! Pick a number between 1 & 31.');
 }
-
+alert('The correct answer is 21.');
 
 // this is question 7
 

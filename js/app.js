@@ -29,19 +29,22 @@ function live(){
 }
 live();
 // this is question 2
-var answerCode102 = prompt('Did I take Code 102?').toLowerCase();
+function code(){
+  var answerCode102 = prompt('Did I take Code 102?').toLowerCase();
 
-if (answerCode102 === 'no' || answerCode102 === 'n') {
-  // console.log('Did I take Code 102? ' + answerCode102);
-  // if answer is no, this will show up
-  alert('Correct! I came to Code 201 from Code 101.');
-  correctAnswer++;
-} else {
-  // console.log('Did I take Code 102 ' + answerCode102);
-  // otherwise, this will show up
-  alert('I came to Code 201 from Code 101.');
+  if (answerCode102 === 'no' || answerCode102 === 'n') {
+    // console.log('Did I take Code 102? ' + answerCode102);
+    // if answer is no, this will show up
+    alert('Correct! I came to Code 201 from Code 101.');
+    correctAnswer++;
+  } else {
+    // console.log('Did I take Code 102 ' + answerCode102);
+    // otherwise, this will show up
+    alert('I came to Code 201 from Code 101.');
+  }
+
 }
-
+code();
 // this is question 3
 var answerColor = prompt('Is my favorite color green?').toLowerCase();
 

@@ -12,19 +12,22 @@ alert('Please answer the following "yes or no" questions...');
 // examples: YES yes Yes NO no No, Y, y
 
 // this is question 1
-var answerLive = prompt('Do I live in Washington?').toLowerCase();
+function live(){
+  var answerLive = prompt('Do I live in Washington?').toLowerCase();
 
-if (answerLive === 'no' || answerLive === 'n') {
-  // console.log('Do I live in Washington? ' + answerLive);
-  // if answer is no, this will show up
-  alert('Correct! I live in Oregon.');
-  correctAnswer++;
-} else {
-  // console.log('Do I live in Washington? ' + answerLive);
-  // otherwise, this will show up
-  alert('I live in Oregon.');
+  if (answerLive === 'no' || answerLive === 'n') {
+    // console.log('Do I live in Washington? ' + answerLive);
+    // if answer is no, this will show up
+    alert('Correct! I live in Oregon.');
+    correctAnswer++;
+  } else {
+    // console.log('Do I live in Washington? ' + answerLive);
+    // otherwise, this will show up
+    alert('I live in Oregon.');
+  }
+
 }
-
+live();
 // this is question 2
 var answerCode102 = prompt('Did I take Code 102?').toLowerCase();
 

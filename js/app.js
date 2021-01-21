@@ -125,40 +125,43 @@ function birthday(){
 }
 birthday();
 // // this is question 7
+function movie(){
+  // // array of possible correct answers
+  var favMovies = ['The Greatest Showman', 'Up', 'Dead Poets Society', 'whiplash'];
 
-// // array of possible correct answers
-var favMovies = ['The Greatest Showman', 'Up', 'Dead Poets Society', 'whiplash'];
+  var clueGuesses = 6;
+  for (var j = 0; j < clueGuesses; j++) {
+    var movieGuess = prompt('Can you guess one of my favorite movies?').toLowerCase();
+    // if answer is guessed correctly
 
-var clueGuesses = 6;
-for (var j = 0; j < clueGuesses; j++) {
-  var movieGuess = prompt('Can you guess one of my favorite movies?').toLowerCase();
-  // if answer is guessed correctly
-
-  for (var k = 0; k < favMovies.length; k++) {
-    console.log(`k: ${k}`);
-
-    console.log(`movieGuess: ${movieGuess}`);
-    console.log(`favMovies: ${favMovies[j]}`);
-    if(movieGuess === favMovies[j].toLowerCase()) {
-      console.log('hit');
+    for (var k = 0; k < favMovies.length; k++) {
       console.log(`k: ${k}`);
+
+      console.log(`movieGuess: ${movieGuess}`);
+      console.log(`favMovies: ${favMovies[j]}`);
+      if(movieGuess === favMovies[j].toLowerCase()) {
+        console.log('hit');
+        console.log(`k: ${k}`);
+      }
+    }
+
+    if(movieGuess === favMovies[0].toLowerCase() || movieGuess === favMovies[1].toLowerCase() || movieGuess === favMovies[2].toLowerCase()) {
+      console.log(movieGuess + ' IS one of my favorites!');
+      alert(movieGuess + ' IS one of my favorites!');
+      correctAnswer++;
+      break;
+      // if the guess is wrong
+    } else {
+      console.log(movieGuess + ' ... not one I was thinking of.');
+      alert(movieGuess + ' ... not one I was thinking of.');
     }
   }
+  alert(`The correct answers were ${favMovies[0]}, ${favMovies[1]}, and ${favMovies[2]}.`);
 
-  if(movieGuess === favMovies[0].toLowerCase() || movieGuess === favMovies[1].toLowerCase() || movieGuess === favMovies[2].toLowerCase()) {
-    console.log(movieGuess + ' IS one of my favorites!');
-    alert(movieGuess + ' IS one of my favorites!');
-    correctAnswer++;
-    break;
-    // if the guess is wrong
-  } else {
-    console.log(movieGuess + ' ... not one I was thinking of.');
-    alert(movieGuess + ' ... not one I was thinking of.');
-  }
 }
-alert(`The correct answers were ${favMovies[0]}, ${favMovies[1]}, and ${favMovies[2]}.`);
-
+movie();
 alert(`You scored ${correctAnswer} out of 7 questions correctly.`);
 
 //final message to user
 alert('Thanks again ' + userName + ' for taking my quiz!');
+

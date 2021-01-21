@@ -1,8 +1,8 @@
 'use strict';
 
-// get username and offer greeting
+// // get username and offer greeting
 var userName = prompt('Hello, and thank you for taking my quiz! What is your name?');
-alert('Hello, ' + userName + ', nice to meet you!');
+// alert('Hello, ' + userName + ', nice to meet you!');
 
 var correctAnswer = 0;
 
@@ -82,9 +82,12 @@ if (answerCoffee === 'yes' || answerCoffee === 'y') {
 }
 
 // // this is question 6
-
+var guessLeft = 4;
+console.log('console log outside of loop'+ guessLeft);
 for (var i = 0; i < 4; i++) {
-  var answerNumberGuess = prompt('Guess my January birthday! Pick a number between 1 & 31. You will have 4 guesses.');
+  guessLeft--;
+  console.log('console log inside of loop' + guessLeft);
+  var answerNumberGuess = prompt(`Guess my January birthday! Pick a number between 1 & 31. You have ${guessLeft} guesses.`);
   // if answer is guessed correctly
   if(answerNumberGuess === '21') {
     console.log('You guessed my birthday is ' + answerNumberGuess);
@@ -103,21 +106,34 @@ for (var i = 0; i < 4; i++) {
 }
 alert('The correct answer is 21.');
 
-// this is question 7
-// array of possible correct answers
-var favMovies = ['the greatest showman', 'up', 'dead poets society'];
-var clueGuesses = 6;
+// // this is question 7
 
-for (var j = 0; j < 6; j++) {
-  var movieGuess = prompt('Can you guess one of my favorite movies? Guesses left: ' + clueGuesses--).toLowerCase();
+// // array of possible correct answers
+var favMovies = ['The Greatest Showman', 'Up', 'Dead Poets Society', 'whiplash'];
+
+var clueGuesses = 6;
+for (var j = 0; j < clueGuesses; j++) {
+  var movieGuess = prompt('Can you guess one of my favorite movies?').toLowerCase();
   // if answer is guessed correctly
-  if(movieGuess === favMovies) {
+
+  for (var k = 0; k < favMovies.length; k++) {
+    console.log(`k: ${k}`);
+
+    console.log(`movieGuess: ${movieGuess}`);
+    console.log(`favMovies: ${favMovies[j]}`);
+    if(movieGuess === favMovies[j].toLowerCase()) {
+      console.log('hit');
+      console.log(`k: ${k}`);
+    }
+  }
+
+  if(movieGuess === favMovies[0].toLowerCase() || movieGuess === favMovies[1].toLowerCase() || movieGuess === favMovies[2].toLowerCase()) {
     console.log(movieGuess + ' IS one of my favorites!');
     alert(movieGuess + ' IS one of my favorites!');
     correctAnswer++;
     break;
     // if the guess is wrong
-  } else if (movieGuess !== favMovies ) {
+  } else {
     console.log(movieGuess + ' ... not one I was thinking of.');
     alert(movieGuess + ' ... not one I was thinking of.');
   }
@@ -126,5 +142,5 @@ alert(`The correct answers were ${favMovies[0]}, ${favMovies[1]}, and ${favMovie
 
 alert(`You scored ${correctAnswer} out of 7 questions correctly.`);
 
-// //final message to user
-// alert('Thanks again ' + userName + ' for taking my quiz!');
+//final message to user
+alert('Thanks again ' + userName + ' for taking my quiz!');

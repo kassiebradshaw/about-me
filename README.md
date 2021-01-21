@@ -27,6 +27,12 @@
 * Collaborated on loop code with Patrick Jarrett
 * Collaborated on increment counting with Tom McGuire
 
+PAIR PROGRAMMING:
+I was teamed up with Alex Williams for this assignment.
+
+* I was driver on <https://github.com/SpaceLobster2311/about-me/pull/1>
+* I was navigator on <https://github.com/kassiebradshaw/about-me/pull/1>
+
 <!-- 1-16-21: I'm having some trouble with how to let the user pick an answer from an array where there are multiple answers.  -->
 <!-- I need to fix my CSS properties to show my ordered lists with numbers -->
 <!-- I still need to update my CSS more for presentation purposes -->

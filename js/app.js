@@ -170,34 +170,28 @@ birthday();
 // this is the function for question 7
 function movie() {
   // my array of possible correct answers
-  // var favMovies = ['the greatest showman', 'up', 'dead poets society'];
+  var favMovies = ['the greatest showman', 'up', 'dead poets society'];
 
   var clueGuesses = 6;
   var guessCorrect = false;
   // this loop runs as mnay times = variable clueGuesses
   for (var j = 0; j < clueGuesses; j++) {
     var movieGuess = prompt('Can you guess one of my favorite movies?').toLowerCase();
-
-    // this loop runs the user's guess through the whole array of my favorite movies, only breaking if their guess matches something in the array
-    var favMovies = ['the greatest showman', 'up', 'dead poets society'];
+    // console.log(`Fav movie guess ${movieGuess}`);
+    favMovies = ['the greatest showman', 'up', 'dead poets society'];
     for (var k = 0; k < favMovies.length; k++) {
-
-      console.log(`start of loop ${k}`);
-      // if they guess correctly
-      if (movieGuess.toLowerCase === favMovies[k].toLowerCase()) {
-        console.log(`if guess matches index ${movieGuess}`);
-        // guessCorrect variable changes to true
+      console.log(`k loop start ${k}`);
+      if (movieGuess === favMovies[k]) {
         guessCorrect = true;
-        // loop ends
+        correctAnswer++;
       }
     }
-    // if they guessed correctly, they will be alerted and the main question loop will break
     if (guessCorrect) {
+      // console.log(`Correct guess ${movieGuess}`);
       alert(`${movieGuess} IS one of my favorite movies!`);
       break;
     } else {
-      //   console.log(movieGuess + ' ... not one I was thinking of.');
-      alert(`${movieGuess}... not one I was thinking of.'`);
+      alert(`${movieGuess}...not one I was thinking of.`);
     }
   }
   alert(`The correct answers were ${favMovies[0]}, ${favMovies[1]}, and ${favMovies[2]}.`);

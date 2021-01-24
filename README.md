@@ -1,7 +1,5 @@
 # LAB - 02
 
-<!-- This is a WIP I am submitting now to preserve full credit AND so you can see my progress. I will ACP regularly -->
-
 ## About Me
 
 * I created a short "about me" quiz that asks the user 5 questions about me and lets them know if they are correct. Then my page gives a bit of my background.
@@ -32,7 +30,3 @@ I was teamed up with Alex Williams for this assignment.
 
 * I was driver on <https://github.com/SpaceLobster2311/about-me/pull/1>
 * I was navigator on <https://github.com/kassiebradshaw/about-me/pull/1>
-
-<!-- 1-16-21: I'm having some trouble with how to let the user pick an answer from an array where there are multiple answers.  -->
-<!-- I need to fix my CSS properties to show my ordered lists with numbers -->
-<!-- I still need to update my CSS more for presentation purposes -->
